@@ -4,110 +4,70 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Get It Right Renovations Inc. | Toronto Energy-Efficient Upgrades</title>
-  <meta name="description" content="Windows, doors, insulation, roofing, and energy-efficient renovations in the GTA. Government rebate guidance included. Call 647-821-0132." />
-  <meta name="theme-color" content="#0b5fff" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Get It Right Renovations Inc." />
-  <meta property="og:description" content="Energy-efficient renovations for Toronto & GTA. You dream it! We build it!" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://getitrightrenos.ca/" />
-  <!-- If you add a logo later, update the path below and uncomment -->
+  <meta name="description" content="Windows, doors, insulation, and roofing in the GTA. We help you maximize government rebates. Call 647-821-0132." />
+  <link rel="stylesheet" href="assets/style.css">
   <!-- <link rel="icon" href="assets/images/logo.png"> -->
-
-  <style>
-    :root{
-      --brand:#0b5fff; --dark:#0f172a; --text:#0b1220; --muted:#5b677a; --bg:#ffffff; --ring:#e6ecff; --accent:#00b894;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-    header{position:relative}
-    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;border-bottom:1px solid var(--ring);background:#fff;position:sticky;top:0;z-index:20}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
-    .brand .tag{display:block;font-size:12px;color:var(--muted)}
-    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
-    .btn{display:inline-block;padding:10px 16px;border-radius:12px;font-weight:700;border:1px solid var(--brand);background:var(--brand);color:#fff}
-    .btn.outline{background:#fff;color:var(--brand)}
-    .hero img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
-    .heroText{position:relative;margin-top:-88px}
-    .heroCard{margin:0 auto;max-width:1100px;background:#fff;padding:22px;border-radius:16px;box-shadow:0 8px 30px rgba(2,12,60,.12);border:1px solid var(--ring)}
-    .heroCard h1{margin:0 0 6px;font-size:28px}
-    .heroCard p{margin:0 0 14px;color:var(--muted)}
-    main{max-width:1100px;margin:28px auto;padding:0 18px}
-    .grid{display:grid;gap:16px}
-    .cards{grid-template-columns:repeat(12,1fr)}
-    .card{grid-column:span 12;border:1px solid var(--ring);border-radius:16px;padding:18px;background:#fff}
-    .card h3{margin:0 0 6px}
-    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--ring);color:var(--brand);font-weight:700;font-size:12px}
-    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
-    footer{border-top:1px solid var(--ring);margin-top:38px;padding:22px 18px;color:var(--muted);background:#fafcff}
-    .cols{display:grid;grid-template-columns:1fr;gap:16px}
-    .legal{font-size:12px;color:#6b7280}
-    @media(min-width:700px){
-      .heroCard h1{font-size:34px}
-      .card{grid-column:span 4}
-      .cols{grid-template-columns:1fr 1fr}
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <div class="topbar">
-      <div class="brand">
-        <!-- If/when you add a small logo file, drop it here -->
-        <!-- <img src="assets/images/logo.png" alt="Get It Right Renovations Logo" width="36" height="36"> -->
-        <div>
-          GET IT RIGHT RENOVATIONS INC.
-          <span class="tag">You dream it! We build it!</span>
-        </div>
-      </div>
-      <nav aria-label="Main">
-        <ul>
-          <li><a class="btn outline" href="Services.html">Services</a></li>
-          <li><a class="btn outline" href="Contacts.html">Contact</a></li>
-          <li><a class="btn" href="tel:+16478210132">Call 647-821-0132</a></li>
-        </ul>
-      </nav>
+  <div class="topbar">
+    <div class="brand">
+      <!-- <img src="assets/images/logo.png" alt="Logo" width="36" height="36"> -->
+      <div>GET IT RIGHT RENOVATIONS INC.<small>You dream it! We build it!</small></div>
     </div>
+    <nav aria-label="Main">
+      <ul>
+        <li><a class="btn outline" href="Services.html">Services</a></li>
+        <li><a class="btn outline" href="Contacts.html">Contact</a></li>
+        <li><a class="btn" href="tel:+16478210132">Call 647-821-0132</a></li>
+      </ul>
+    </nav>
+  </div>
 
-    <!-- Full-width hero image (uses your uploaded filename) -->
-    <div class="hero" role="img" aria-label="Renovation work example">
-      <img src="./A_high-resolution_photograph_showcases_a.png" alt="Get It Right Renovations work example">
-    </div>
-
-    <!-- Overlay card -->
-    <div class="heroText">
-      <div class="heroCard">
-        <span class="badge">Toronto & GTA</span>
-        <h1>Energy-Efficient Renovations Done Right</h1>
-        <p>Windows • Doors • Insulation • Roofing — with guidance on government rebates to save you money.</p>
-        <div class="cta">
-          <a class="btn" href="tel:+16478210132">Get a Free Quote</a>
-          <a class="btn outline" href="Contacts.html">Book an Inspection</a>
-        </div>
-      </div>
-    </div>
+  <header class="hero" role="img" aria-label="Renovation hero image">
+    <img src="assets/images/hero.jpg" alt="Get It Right Renovations—project example">
   </header>
 
-  <main>
+  <section class="heroCard">
+    <span class="badge">Toronto & GTA</span>
+    <h1>Energy-Efficient Renovations Done Right</h1>
+    <p>Windows • Doors • Insulation • Roofing — with rebate guidance to cut your costs.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a class="btn" href="tel:+16478210132">Get a Free Quote</a>
+      <a class="btn outline" href="Contacts.html">Book an Inspection</a>
+    </div>
+  </section>
+
+  <main class="container">
     <section aria-labelledby="services">
       <h2 id="services">Our Core Services</h2>
       <div class="grid cards" style="margin-top:10px">
         <article class="card">
+          <img src="assets/images/windows.jpg" alt="High-performance windows">
           <h3>High-Performance Windows</h3>
-          <p>Upgrade to energy-rated windows that cut drafts and reduce utility bills.</p>
+          <p>ENERGY STAR® windows with pro flashing, trim, and airtight sealing.</p>
         </article>
         <article class="card">
+          <img src="assets/images/insulation.jpg" alt="Insulation and air sealing">
           <h3>Insulation & Air-Sealing</h3>
-          <p>Attic, wall, and basement solutions that lock in comfort year-round.</p>
+          <p>Attic top-ups, wall/basement solutions, vapour barrier, draft proofing.</p>
         </article>
         <article class="card">
-          <h3>Exterior Doors & Roofing</h3>
-          <p>Durable doors and solar-ready roofing with clean, professional installs.</p>
+          <img src="assets/images/doors.jpg" alt="Exterior doors">
+          <h3>Exterior Doors</h3>
+          <p>Entry/side/patio doors with secure hardware and clean installs.</p>
+        </article>
+        <article class="card">
+          <img src="assets/images/roofing.jpg" alt="Roofing">
+          <h3>Roofing</h3>
+          <p>Durable asphalt & solar-ready roofing, proper venting and underlayment.</p>
+        </article>
+        <article class="card">
+          <img src="assets/images/crew.jpg" alt="Our crew at work">
+          <h3>Why Us</h3>
+          <p>Union craftsmanship, clean sites, transparent quotes, and fast timelines.</p>
         </article>
       </div>
-      <div class="cta" style="margin-top:12px">
+      <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
         <a class="btn" href="Services.html">See All Services</a>
         <a class="btn outline" href="mailto:getitrightrenos@gmail.com?subject=Quote%20Request">Email Us</a>
       </div>
@@ -115,7 +75,7 @@
 
     <section style="margin-top:26px" aria-labelledby="rebates">
       <h2 id="rebates">Rebates & Financing</h2>
-      <p>We help you navigate available programs to maximize savings on eligible upgrades. Ask us about current incentives during your quote.</p>
+      <p>We help you navigate current programs to maximize savings on eligible upgrades.</p>
     </section>
   </main>
 
@@ -127,15 +87,10 @@
         <a href="mailto:getitrightrenos@gmail.com">getitrightrenos@gmail.com</a><br>
         IG/FB: @getitrightrenos
       </div>
-      <div class="legal">
-        © <span id="yr"></span> Get It Right Renovations Inc. All rights reserved.
-      </div>
+      <div style="align-self:end;text-align:right">© <span id="yr"></span> GIRR. All rights reserved.</div>
     </div>
   </footer>
 
-  <script>
-    // small helper to keep the copyright year current
-    document.getElementById('yr').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
 </body>
 </html>
