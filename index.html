@@ -1,150 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Get It Right Renovations Inc.</title>
-  <meta name="description" content="Energy-efficient renovations in the GTA. Windows, doors, insulation, roofing, kitchens, bathrooms. Government rebates available.">
-  <link rel="stylesheet" href="assets/style.css"/>
-  <link rel="icon" href="assets/images/logo.png"/>
-</head>
-<body>
-  <header>
-    <div class="logo">
-    <img src="A_high-resolution_photograph_showcases_a.png" alt="Get It Right Renovations Work Example">
-    <h1>Welcome to Get It Right Renovations</h1>
-    ...
-</body>
-    </div>
-    <nav>
-      <ul>
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <button id="menuBtn" aria-label="Toggle Menu">☰</button>
-    </nav>
-  </header>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Get It Right Renovations Inc. | Toronto Energy-Efficient Upgrades</title>
+  <meta name="description" content="Windows, doors, insulation, roofing, and energy-efficient renovations in the GTA. Government rebate guidance included. Call 647-821-0132." />
+  <meta name="theme-color" content="#0b5fff" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Get It Right Renovations Inc." />
+  <meta property="og:description" content="Energy-efficient renovations for Toronto & GTA. You dream it! We build it!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getitrightrenos.ca/" />
+  <!-- If you add a logo later, update the path below and uncomment -->
+  <!-- <link rel="icon" href="assets/images/logo.png"> -->
 
-  <section class="hero">
-    <h1>You dream it! We build it!</h1>
-    <p>Energy-efficient renovations backed by government rebates.</p>
-    <a class="cta-btn" href="contact.html">Book Your Free Estimate</a>
-  </section>
-
-  <section class="services-preview">
-    <h2>Our Core Services</h2>
-    <div class="services-grid">
-      <div class="service">
-        <img src="assets/images/windows.jpg" alt="Windows & Doors"/>
-        <h3>Windows & Doors</h3>
-        <p>Energy Star certified installations with rebate eligibility.</p>
-      </div>
-      <div class="service">
-        <img src="assets/images/insulation.jpg" alt="Insulation Upgrades"/>
-        <h3>Insulation</h3>
-        <p>Upgrade attic, wall, and basement insulation for year-round comfort.</p>
-      </div>
-      <div class="service">
-        <img src="assets/images/roofing.jpg" alt="Roofing"/>
-        <h3>Roofing</h3>
-        <p>Durable, solar-ready roofing with extended warranty.</p>
-      </div>
-    </div>
-    <a class="secondary-btn" href="services.html">See All Services</a>
-  </section>
-
-  <section class="rebates">
-    <h2>Save Money with Rebates</h2>
-    <p>Through the <strong>Green Affordability Program</strong>, you may qualify for up to <strong>$5,600</strong> in rebates on energy-efficient upgrades.</p>
-    <a class="cta-btn" href="services.html">Learn More</a>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Get It Right Renovations Inc. | Toronto, ON</p>
-    <p>
-      <a href="mailto:getitrightrenos@gmail.com">getitrightrenos@gmail.com</a> |
-      <a href="tel:6478210132">647-821-0132</a>
-    </p>
-    <div class="socials">
-      <a target="_blank" href="https://instagram.com/getitrightrenos">Instagram</a> |
-      <a target="_blank" href="https://facebook.com/getitrightrenos">Facebook</a>
-    </div>
-  </footer>
-
-  <script src="assets/script.js"></script>
-</body>
-</html>
-      padding: 50px 20px;
-      background: linear-gradient(to right, #2563eb, #1e3a8a);
-      color: white;
+  <style>
+    :root{
+      --brand:#0b5fff; --dark:#0f172a; --text:#0b1220; --muted:#5b677a; --bg:#ffffff; --ring:#e6ecff; --accent:#00b894;
     }
-    .hero h2 { font-size: 2.2rem; margin-bottom: 15px; }
-    .section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .contact {
-      background: #111827;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    footer {
-      background: #1f2937;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      font-size: 0.9rem;
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{position:relative}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;border-bottom:1px solid var(--ring);background:#fff;position:sticky;top:0;z-index:20}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .brand .tag{display:block;font-size:12px;color:var(--muted)}
+    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+    .btn{display:inline-block;padding:10px 16px;border-radius:12px;font-weight:700;border:1px solid var(--brand);background:var(--brand);color:#fff}
+    .btn.outline{background:#fff;color:var(--brand)}
+    .hero img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
+    .heroText{position:relative;margin-top:-88px}
+    .heroCard{margin:0 auto;max-width:1100px;background:#fff;padding:22px;border-radius:16px;box-shadow:0 8px 30px rgba(2,12,60,.12);border:1px solid var(--ring)}
+    .heroCard h1{margin:0 0 6px;font-size:28px}
+    .heroCard p{margin:0 0 14px;color:var(--muted)}
+    main{max-width:1100px;margin:28px auto;padding:0 18px}
+    .grid{display:grid;gap:16px}
+    .cards{grid-template-columns:repeat(12,1fr)}
+    .card{grid-column:span 12;border:1px solid var(--ring);border-radius:16px;padding:18px;background:#fff}
+    .card h3{margin:0 0 6px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--ring);color:var(--brand);font-weight:700;font-size:12px}
+    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+    footer{border-top:1px solid var(--ring);margin-top:38px;padding:22px 18px;color:var(--muted);background:#fafcff}
+    .cols{display:grid;grid-template-columns:1fr;gap:16px}
+    .legal{font-size:12px;color:#6b7280}
+    @media(min-width:700px){
+      .heroCard h1{font-size:34px}
+      .card{grid-column:span 4}
+      .cols{grid-template-columns:1fr 1fr}
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Get It Right Renovations Inc.</h1>
-    <p>You dream it! We build it!</p>
+    <div class="topbar">
+      <div class="brand">
+        <!-- If/when you add a small logo file, drop it here -->
+        <!-- <img src="assets/images/logo.png" alt="Get It Right Renovations Logo" width="36" height="36"> -->
+        <div>
+          GET IT RIGHT RENOVATIONS INC.
+          <span class="tag">You dream it! We build it!</span>
+        </div>
+      </div>
+      <nav aria-label="Main">
+        <ul>
+          <li><a class="btn outline" href="Services.html">Services</a></li>
+          <li><a class="btn outline" href="Contacts.html">Contact</a></li>
+          <li><a class="btn" href="tel:+16478210132">Call 647-821-0132</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Full-width hero image (uses your uploaded filename) -->
+    <div class="hero" role="img" aria-label="Renovation work example">
+      <img src="./A_high-resolution_photograph_showcases_a.png" alt="Get It Right Renovations work example">
+    </div>
+
+    <!-- Overlay card -->
+    <div class="heroText">
+      <div class="heroCard">
+        <span class="badge">Toronto & GTA</span>
+        <h1>Energy-Efficient Renovations Done Right</h1>
+        <p>Windows • Doors • Insulation • Roofing — with guidance on government rebates to save you money.</p>
+        <div class="cta">
+          <a class="btn" href="tel:+16478210132">Get a Free Quote</a>
+          <a class="btn outline" href="Contacts.html">Book an Inspection</a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <main>
+    <section aria-labelledby="services">
+      <h2 id="services">Our Core Services</h2>
+      <div class="grid cards" style="margin-top:10px">
+        <article class="card">
+          <h3>High-Performance Windows</h3>
+          <p>Upgrade to energy-rated windows that cut drafts and reduce utility bills.</p>
+        </article>
+        <article class="card">
+          <h3>Insulation & Air-Sealing</h3>
+          <p>Attic, wall, and basement solutions that lock in comfort year-round.</p>
+        </article>
+        <article class="card">
+          <h3>Exterior Doors & Roofing</h3>
+          <p>Durable doors and solar-ready roofing with clean, professional installs.</p>
+        </article>
+      </div>
+      <div class="cta" style="margin-top:12px">
+        <a class="btn" href="Services.html">See All Services</a>
+        <a class="btn outline" href="mailto:getitrightrenos@gmail.com?subject=Quote%20Request">Email Us</a>
+      </div>
+    </section>
 
-  <div class="hero">
-    <h2>Energy-Efficient, Professional Renovations in the GTA</h2>
-    <p>Unionized • Sustainable • Black-Owned</p>
-  </div>
-
-  <div class="section" id="services">
-    <h2>Our Services</h2>
-    <p>✔️ Windows & Doors (Energy Star Certified)</p>
-    <p>✔️ Basements, Kitchens & Bathrooms</p>
-    <p>✔️ Flooring, Railings & Custom Carpentry</p>
-    <p>✔️ Insulation & Roofing (Green Rebate Eligible)</p>
-  </div>
-
-  <div class="section" id="about">
-    <h2>About Us</h2>
-    <p>
-      At Get It Right Renovations Inc., we combine craftsmanship, innovation,
-      and sustainability to deliver the best renovation experience in Toronto
-      and the GTA. As proud members of Local 27 Carpenters Union, we guarantee
-      quality, safety, and compliance in every project.
-    </p>
-  </div>
-
-  <div class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>📞 647 821 0132</p>
-    <p>📧 getitrightrenos@gmail.com</p>
-    <p>📲 Instagram & Facebook: @getitrightrenos</p>
-  </div>
+    <section style="margin-top:26px" aria-labelledby="rebates">
+      <h2 id="rebates">Rebates & Financing</h2>
+      <p>We help you navigate available programs to maximize savings on eligible upgrades. Ask us about current incentives during your quote.</p>
+    </section>
+  </main>
 
   <footer>
-    © 2025 Get It Right Renovations Inc. All rights reserved.
+    <div class="cols">
+      <div>
+        <strong>Get It Right Renovations Inc.</strong><br>
+        Toronto, Ontario • <a href="tel:+16478210132">647-821-0132</a><br>
+        <a href="mailto:getitrightrenos@gmail.com">getitrightrenos@gmail.com</a><br>
+        IG/FB: @getitrightrenos
+      </div>
+      <div class="legal">
+        © <span id="yr"></span> Get It Right Renovations Inc. All rights reserved.
+      </div>
+    </div>
   </footer>
+
+  <script>
+    // small helper to keep the copyright year current
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
