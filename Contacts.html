@@ -1,87 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - Get It Right Renovations Inc.</title>
-  <meta name="description" content="Contact Get It Right Renovations Inc. for quotes, bookings, and rebate-ready upgrades in the GTA.">
-  <link rel="stylesheet" href="assets/style.css"/>
-  <link rel="icon" href="assets/images/logo.png"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Get It Right Renovations Inc.</title>
+  <meta name="description" content="Contact Get It Right Renovations Inc. for quotes, inspections, and service in Toronto & GTA." />
+  <style>
+    :root{--brand:#0b5fff;--ring:#e6ecff;--muted:#5b677a}
+    *{box-sizing:border-box} body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:#0b1220;background:#fff}
+    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--ring);position:sticky;top:0;background:#fff;z-index:10}
+    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+    .btn{padding:10px 16px;border-radius:12px;font-weight:700;border:1px solid var(--brand);background:var(--brand);color:#fff}
+    .btn.outline{background:#fff;color:var(--brand)}
+    main{max-width:900px;margin:24px auto;padding:0 18px}
+    form{display:grid;gap:12px;margin-top:12px}
+    input,textarea{width:100%;padding:12px 14px;border:1px solid var(--ring);border-radius:12px;font:inherit}
+    label{font-weight:700}
+    footer{border-top:1px solid var(--ring);margin-top:36px;padding:22px 18px;color:var(--muted);background:#fafcff}
+  </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="assets/images/logo.png" alt="Get It Right Renovations Logo"/>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a class="active" href="contact.html">Contact</a></li>
-      </ul>
-      <button id="menuBtn" aria-label="Toggle Menu">☰</button>
-    </nav>
-  </header>
+  <div class="topbar">
+    <div><strong>GET IT RIGHT RENOVATIONS INC.</strong></div>
+    <nav><ul>
+      <li><a class="btn outline" href="index.html">Home</a></li>
+      <li><a class="btn outline" href="Services.html">Services</a></li>
+      <li><a class="btn" href="tel:+16478210132">Call 647-821-0132</a></li>
+    </ul></nav>
+  </div>
 
-  <section class="page-hero">
+  <main>
     <h1>Contact Us</h1>
-    <p>Let’s start building your dream project today.</p>
-  </section>
+    <p>Tell us about your project. We’ll respond quickly with next steps and rebate guidance.</p>
 
-  <section class="contact-section">
-    <div class="container">
-      <div class="contact-info">
-        <h2>Get In Touch</h2>
-        <p><strong>Phone:</strong> <a href="tel:6478210132">647-821-0132</a></p>
-        <p><strong>Email:</strong> <a href="mailto:getitrightrenos@gmail.com">getitrightrenos@gmail.com</a></p>
-        <p><strong>Follow Us:</strong>
-          <a target="_blank" href="https://instagram.com/getitrightrenos">Instagram</a> |
-          <a target="_blank" href="https://facebook.com/getitrightrenos">Facebook</a>
-        </p>
-      </div>
-
-      <div class="contact-form">
-        <h2>Send Us a Message</h2>
-        <!-- Replace the action with YOUR Formspree endpoint -->
-        <form action="https://formspree.io/f/mwkgrzby" method="POST">
-          <label for="name">Full Name</label>
-          <input id="name" name="name" type="text" required/>
-
-          <label for="email">Email Address</label>
-          <input id="email" name="_replyto" type="email" required/>
-
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
-
-          <button class="cta-btn" type="submit">Send Message</button>
-        </form>
-      </div>
+    <!-- Static email/phone CTA (works immediately) -->
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin:10px 0 16px">
+      <a class="btn" href="tel:+16478210132">Call Now</a>
+      <a class="btn outline" href="mailto:getitrightrenos@gmail.com?subject=Quote%20Request">Email Us</a>
     </div>
-  </section>
 
-  <section class="map-section">
-    <h2>Our Service Area</h2>
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28872.416!2d-79.3832!3d43.6532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb2a!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1616000000000"
-        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
-    </div>
-  </section>
+    <!-- Simple static form (submits via mailto; later we can wire to Netlify Forms) -->
+    <form action="mailto:getitrightrenos@gmail.com" method="post" enctype="text/plain">
+      <div>
+        <label for="name">Full Name</label>
+        <input id="name" name="Name" required />
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input id="phone" name="Phone" required />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="Email" required />
+      </div>
+      <div>
+        <label for="msg">Project Details</label>
+        <textarea id="msg" name="Message" rows="5" placeholder="Windows, doors, insulation, roofing..."></textarea>
+      </div>
+      <button class="btn" type="submit">Send</button>
+    </form>
+
+    <h2 style="margin-top:22px">Service Area</h2>
+    <p>Toronto • Mississauga • Brampton • Oakville • Vaughan • Scarborough • Markham • Etobicoke</p>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Get It Right Renovations Inc. | Toronto, ON</p>
-    <p>
-      <a href="mailto:getitrightrenos@gmail.com">getitrightrenos@gmail.com</a> |
-      <a href="tel:6478210132">647-821-0132</a>
-    </p>
-    <div class="socials">
-      <a target="_blank" href="https://instagram.com/getitrightrenos">Instagram</a> |
-      <a target="_blank" href="https://facebook.com/getitrightrenos">Facebook</a>
-    </div>
+    © <span id="yr"></span> Get It Right Renovations Inc. • Toronto, Ontario • IG/FB: @getitrightrenos
   </footer>
-
-  <script src="assets/script.js"></script>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
 </body>
 </html>
