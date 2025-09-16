@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Get It Right Renovations Inc.</title>
+  <meta name="description" content="Contact Get It Right Renovations Inc. for quotes, inspections, and service in Toronto & GTA." />
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand"><div>GET IT RIGHT RENOVATIONS INC.<small>Toronto & GTA</small></div></div>
+    <nav><ul>
+      <li><a class="btn outline" href="index.html">Home</a></li>
+      <li><a class="btn outline" href="Services.html">Services</a></li>
+      <li><a class="btn" href="tel:+16478210132">Call 647-821-0132</a></li>
+    </ul></nav>
+  </div>
+
+  <main class="container">
+    <h1>Contact Us</h1>
+    <p>Tell us about your project. We’ll respond quickly with next steps and rebate guidance.</p>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin:10px 0 16px">
+      <a class="btn" href="tel:+16478210132">Call Now</a>
+      <a class="btn outline" href="mailto:getitrightrenos@gmail.com?subject=Quote%20Request">Email Us</a>
+    </div>
+
+    <!-- Simple mailto form for now (works everywhere) -->
+    <form action="mailto:getitrightrenos@gmail.com" method="post" enctype="text/plain">
+      <div>
+        <label for="name">Full Name</label>
+        <input id="name" name="Name" required />
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input id="phone" name="Phone" required />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="Email" required />
+      </div>
+      <div>
+        <label for="msg">Project Details</label>
+        <textarea id="msg" name="Message" rows="5" placeholder="Windows, doors, insulation, roofing..."></textarea>
+      </div>
+      <button class="btn" type="submit">Send</button>
+    </form>
+
+    <h2 style="margin-top:22px">Service Area</h2>
+    <p>Toronto • Mississauga • Brampton • Oakville • Vaughan • Scarborough • Markham • Etobicoke</p>
+  </main>
+
+  <footer>© <span id="yr"></span> Get It Right Renovations Inc. • IG/FB: @getitrightrenos</footer>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+</body>
+</html>
