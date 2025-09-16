@@ -1,57 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | Get It Right Renovations Inc.</title>
-  <meta name="description" content="Contact Get It Right Renovations Inc. for quotes, inspections, and service in Toronto & GTA." />
-  <link rel="stylesheet" href="assets/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Get It Right Renovations Inc.</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; margin:0; background:#f7f7f9;}
+    .container{max-width:900px;margin:40px auto;padding:24px}
+    .card{background:#fff;border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.08);padding:24px}
+    label{display:block;font-weight:600;margin-top:14px}
+    input,textarea{width:100%;padding:12px 14px;margin-top:6px;border:1px solid #dcdce0;border-radius:10px;font-size:16px}
+    button{margin-top:18px;padding:12px 18px;border:0;border-radius:12px;font-weight:700;cursor:pointer;background:#0f766e;color:#fff}
+    .hidden{display:none}
+  </style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="brand"><div>GET IT RIGHT RENOVATIONS INC.<small>Toronto & GTA</small></div></div>
-    <nav><ul>
-      <li><a class="btn outline" href="index.html">Home</a></li>
-      <li><a class="btn outline" href="Services.html">Services</a></li>
-      <li><a class="btn" href="tel:+16478210132">Call 647-821-0132</a></li>
-    </ul></nav>
-  </div>
+  <div class="container">
+    <div class="card">
+      <h1>Contact Get It Right Renovations</h1>
+      <p>Request a quote or ask a question. We’ll reply ASAP.</p>
 
-  <main class="container">
-    <h1>Contact Us</h1>
-    <p>Tell us about your project. We’ll respond quickly with next steps and rebate guidance.</p>
+      <!-- ✅ Netlify Forms -->
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+        <!-- Netlify needs these two fields -->
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
 
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin:10px 0 16px">
-      <a class="btn" href="tel:+16478210132">Call Now</a>
-      <a class="btn outline" href="mailto:getitrightrenos@gmail.com?subject=Quote%20Request">Email Us</a>
-    </div>
+        <label for="name">Your Name*</label>
+        <input id="name" name="name" required />
 
-    <!-- Simple mailto form for now (works everywhere) -->
-    <form action="mailto:getitrightrenos@gmail.com" method="post" enctype="text/plain">
-      <div>
-        <label for="name">Full Name</label>
-        <input id="name" name="Name" required />
-      </div>
-      <div>
+        <label for="email">Email*</label>
+        <input id="email" type="email" name="email" required />
+
         <label for="phone">Phone</label>
-        <input id="phone" name="Phone" required />
-      </div>
-      <div>
-        <label for="email">Email</label>
-        <input id="email" type="email" name="Email" required />
-      </div>
-      <div>
-        <label for="msg">Project Details</label>
-        <textarea id="msg" name="Message" rows="5" placeholder="Windows, doors, insulation, roofing..."></textarea>
-      </div>
-      <button class="btn" type="submit">Send</button>
-    </form>
+        <input id="phone" type="tel" name="phone" inputmode="tel" pattern="[0-9+\-() ]+" />
 
-    <h2 style="margin-top:22px">Service Area</h2>
-    <p>Toronto • Mississauga • Brampton • Oakville • Vaughan • Scarborough • Markham • Etobicoke</p>
-  </main>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project…"></textarea>
 
-  <footer>© <span id="yr"></span> Get It Right Renovations Inc. • IG/FB: @getitrightrenos</footer>
-  <script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
