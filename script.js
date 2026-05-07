@@ -2,16 +2,21 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
     
     // Get form data
-    const name = document.querySelector('input[name="name"]').value;
-    const email = document.querySelector('input[name="email"]').value;
-    const phone = document.querySelector('input[name="phone"]').value;
-    const message = document.querySelector('textarea[name="message"]').value;
+    const formData = {
+        name: document.querySelector('input[name="name"]').value,
+        email: document.querySelector('input[name="email"]').value,
+        phone: document.querySelector('input[name="phone"]').value,
+        message: document.querySelector('textarea[name="message"]').value,
+        timestamp: new Date().toISOString()
+    };
     
-    // Show confirmation
-    alert(`Thank you, ${name}! Your request has been sent. We'll contact you at ${phone} soon.`);
+    console.log("Form submitted:", formData);
     
-    // Clear form
+    // Show success message
+    alert("✓ Request received! We'll contact you shortly with your free quote.");
+    
+    // Reset form
     document.getElementById("contact-form").reset();
     
-    // TODO: Connect to Zapier webhook for lead capture
+    // TODO: Send to Zapier webhook for automatic lead capture and email
 });
