@@ -1,5 +1,9 @@
+console.log("✅ script loaded");
+
 document.getElementById("contact-form").addEventListener("submit", async function(e) {
   e.preventDefault();
+  
+  console.log("✅ form submitted");
 
   const formData = new FormData(this);
 
@@ -9,6 +13,8 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     phone: formData.get("phone"),
     message: formData.get("message")
   };
+
+  console.log("sending data:", data);
 
   try {
     const response = await fetch("https://hooks.zapier.com/hooks/catch/27506973/4y44lgl/", {
