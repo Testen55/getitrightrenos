@@ -5,16 +5,16 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
 }
 
 header {
-    background: #0b6b3a;
+    background: linear-gradient(135deg, #0b6b3a 0%, #084d2a 100%);
     color: white;
-    padding: 30px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -25,24 +25,25 @@ header h1 {
 
 header p {
     font-size: 1.1em;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 .hero {
     background: white;
     padding: 60px 20px;
     text-align: center;
+    border-bottom: 3px solid #0b6b3a;
 }
 
 .hero h2 {
-    font-size: 2.2em;
-    color: #0b6b3a;
+    font-size: 2em;
     margin-bottom: 15px;
+    color: #0b6b3a;
 }
 
 .hero p {
     font-size: 1.1em;
-    margin-bottom: 10px;
+    margin: 10px 0;
     color: #666;
 }
 
@@ -53,16 +54,16 @@ header p {
 }
 
 .services h2 {
-    font-size: 2.2em;
-    color: #0b6b3a;
+    font-size: 2em;
     margin-bottom: 40px;
+    color: #0b6b3a;
 }
 
 .service-list {
     display: flex;
-    gap: 20px;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -71,63 +72,63 @@ header p {
     background: white;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     flex: 1;
     min-width: 250px;
     max-width: 300px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .service-card h3 {
     color: #0b6b3a;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 1.3em;
 }
 
 .service-card p {
     color: #666;
-    font-size: 0.95em;
 }
 
 .contact {
-    background: white;
     padding: 60px 20px;
+    background: white;
     text-align: center;
 }
 
 .contact h2 {
-    font-size: 2.2em;
-    color: #0b6b3a;
+    font-size: 2em;
     margin-bottom: 30px;
+    color: #0b6b3a;
 }
 
 #contact-form {
     max-width: 500px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-input, textarea {
-    display: block;
-    width: 100%;
-    margin: 15px 0;
+input,
+textarea {
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-family: Arial, sans-serif;
     font-size: 1em;
-    background: #f9f9f9;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s ease;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
     outline: none;
     border-color: #0b6b3a;
-    background: white;
+    box-shadow: 0 0 5px rgba(11, 107, 58, 0.2);
 }
 
 button {
@@ -137,27 +138,26 @@ button {
     border: none;
     border-radius: 4px;
     font-size: 1.1em;
+    font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 10px;
+    transition: background 0.3s ease;
 }
 
 button:hover {
-    background: #084d28;
+    background: #084d2a;
 }
 
 footer {
-    background: #f8f8f8;
+    background: #333;
+    color: white;
     text-align: center;
     padding: 30px 20px;
     margin-top: 50px;
-    border-top: 3px solid #0b6b3a;
-    color: #666;
 }
 
 footer p {
-    margin: 10px 0;
-    font-size: 0.9em;
+    margin: 5px 0;
+    font-size: 0.95em;
 }
 
 footer a {
@@ -170,25 +170,23 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.8em;
     }
-
-    .hero h2, .services h2, .contact h2 {
-        font-size: 1.8em;
+    
+    .hero h2,
+    .services h2,
+    .contact h2 {
+        font-size: 1.5em;
     }
-
+    
     .service-list {
         flex-direction: column;
+        align-items: center;
     }
-
+    
     .service-card {
-        max-width: 100%;
-    }
-
-    input, textarea {
-        font-size: 16px;
+        width: 100%;
     }
 }
