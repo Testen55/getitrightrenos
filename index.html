@@ -1,57 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get It Right Renovations Inc.</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get It Right Renovations</title>
+
+<style>
+body { margin:0; font-family:Arial; background:#f4f4f4; text-align:center; }
+
+header {
+  background:linear-gradient(135deg,#0b6b3a,#157b4d);
+  color:white;
+  padding:40px;
+}
+
+.hero { padding:50px; background:white; }
+
+.hero video {
+  width:90%; max-width:600px; border-radius:10px;
+}
+
+/* SERVICES */
+.services { padding:50px; }
+
+.card {
+  background:white;
+  padding:20px;
+  margin:15px auto;
+  width:80%;
+  max-width:350px;
+  border-radius:8px;
+  box-shadow:0 3px 8px rgba(0,0,0,.2);
+}
+
+/* GALLERY */
+.gallery { padding:50px; }
+
+.gallery img {
+  width:90%;
+  max-width:350px;
+  margin:10px;
+  border-radius:8px;
+}
+
+/* CONTACT */
+.contact { padding:50px; }
+
+input, textarea {
+  width:80%;
+  padding:12px;
+  margin:10px;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+
+button {
+  padding:15px;
+  width:85%;
+  background:#0b6b3a;
+  color:white;
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* SUCCESS MESSAGE */
+#success-message {
+  display:none;
+  color:green;
+  font-weight:bold;
+  margin-top:20px;
+}
+
+.error {
+  color:red;
+  font-size:14px;
+}
+
+/* FOOTER */
+footer {
+  background:#222;
+  color:white;
+  padding:30px;
+}
+</style>
+
+<script>
+// ✅ FULL CONTROL FORM HANDLER (NO ZAPIER REDIRECT)
+function handleSubmit(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const formData = new FormData(form);
+
+  // BASIC VALIDATION
+  const email = form.email.value;
+  const phone = form.phone.value;
+
+  if (!email.includes("@")) {
+    alert("Enter a valid email");
+    return;
+  }
+
+  if (phone.length < 6) {
+    alert("Enter valid phone");
+    return;
+  }
+
+  fetch("https://hooks.zapier.com/hooks/catch/27506973/4y44lgl/", {
+    method: "POST",
+    body: formData
+  })
+  .then(() => {
+    form.reset();
+    document.getElementById("success-message").style.display = "block";
+  })
+  .catch(() => {
+    alert("Submission failed. Try again.");
+  });
+}
+</script>
+
 </head>
+
 <body>
-    <header>
-        <h1>Get It Right Renovations Inc.</h1>
-        <p>Professional Renovation Services in Ontario</p>
-    </header>
 
-    <section class="hero">
-        <h2>Transform Your Space</h2>
-        <p>Union Local 27 Certified | Licensed & Insured</p>
-        <p>Quality renovations done right, the first time.</p>
-    </section>
+<header>
+  <h1>Get It Right Renovations Inc.</h1>
+  <p>Professional Renovation Services in Ontario</p>
+</header>
 
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="service-list">
-            <div class="service-card">
-                <h3>Kitchen Renovations</h3>
-                <p>Modern designs, quality materials, expert installation.</p>
-            </div>
-            <div class="service-card">
-                <h3>Bathroom Upgrades</h3>
-                <p>Complete bathroom transformations from concept to completion.</p>
-            </div>
-            <div class="service-card">
-                <h3>General Contracting</h3>
-                <p>Full-service renovation solutions for residential & commercial.</p>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+  <h2>Transform Your Space</h2>
+  <p>Union Local 27 Certified | Licensed & Insured</p>
 
-    <section class="contact">
-        <h2>Get Your Free Quote</h2>
-        <form id="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Your Phone" required>
-            <textarea name="message" placeholder="Tell us about your project" rows="5" required></textarea>
-            <button type="submit">Send Request</button>
-        </form>
-    </section>
+  <video autoplay muted loop>
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  </video>
+</section>
 
-    <footer>
-        <p>Get It Right Renovations Inc., Ontario Corp #1001363910 | Union Local 27 Certified, Burlington, ON</p>
-        <p><a href="tel:6478210132">647-821-0132</a></p>
-    </footer>
+<section class="services">
+  <h2>Our Services</h2>
 
-    <script src="script.js"></script>
+  <div class="card">Kitchen Renovations</div>
+  <div class="card">Bathroom Upgrades</div>
+  <div class="card">General Contracting</div>
+</section>
+
+<section class="gallery">
+  <h2>Recent Work</h2>
+
+  <img src="https://picsum.photos/400/300?1">
+  <img src="https://picsum.photos/400/300?2">
+  <img src="https://picsum.photos/400/300?3">
+</section>
+
+<section class="contact">
+  <h2>Get Your Free Quote</h2>
+
+  <form onsubmit="handleSubmit(event)">
+    <input name="name" placeholder="Your Name" required>
+    <input name="email" placeholder="Your Email" required>
+    <input name="phone" placeholder="Your Phone">
+    <textarea name="message" placeholder="Tell us about your project"></textarea>
+
+    <button type="submit">Send Request</button>
+  </form>
+
+  <p id="success-message">
+    ✅ Request received! We'll contact you shortly.
+  </p>
+</section>
+
+<footer>
+  <p>Get It Right Renovations Inc.</p>
+  <p>Ontario Corp #1001363910</p>
+  <p>647‑821‑0132</p>
+
+  <p>
+    Instagram | Facebook
+  </p>
+</footer>
+
 </body>
 </html>
