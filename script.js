@@ -1,22 +1,31 @@
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = {
-        name: document.querySelector('input[name="name"]').value,
-        email: document.querySelector('input[name="email"]').value,
-        phone: document.querySelector('input[name="phone"]').value,
-        message: document.querySelector('textarea[name="message"]').value,
-        timestamp: new Date().toISOString()
-    };
-    
-    console.log("Form submitted:", formData);
-    
-    // Show success message
-    alert("✓ Request received! We'll contact you shortly with your free quote.");
-    
-    // Reset form
-    document.getElementById("contact-form").reset();
-    
-    // TODO: Send to Zapier webhook for automatic lead capture and email
+document.getElementById("contact-form").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  const data = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    phone: formData.get("phone"),
+    message: formData.get("message")
+  };
+
+  try {
+    const response = await fetch("https://hooks.zapier.com/hooks/catch/27506973/4y44lgl/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    console.log("✅ Sent to Zapier:", data);
+
+    alert("✅ Request sent successfully!");
+    this.reset();
+
+  } catch (error) {
+    console.error("❌ Zapier error:", error);
+    alert("❌ Failed to send request");
+  }
 });
