@@ -3,68 +3,133 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get It Right Renovations</title>
+
+<title>Burlington Home Renovations | Get It Right Renovations</title>
+<meta name="description" content="BBB A+ rated renovation company serving Burlington, ON. Kitchens, basements, bathrooms & full home renovations. Done right the first time.">
 
 <style>
-body { margin:0; font-family:Arial; background:#f4f4f4; text-align:center; }
+body {
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4f4f4;
+  color:#222;
+}
 
+/* HEADER */
 header {
   background:linear-gradient(135deg,#0b6b3a,#157b4d);
   color:white;
-  padding:40px;
+  padding:40px 20px;
+  text-align:center;
 }
 
-.hero { padding:50px; background:white; }
+header h1 { margin:0; font-size:32px; }
+header p { margin-top:10px; font-size:16px; }
+
+/* HERO */
+.hero {
+  background:white;
+  padding:60px 20px;
+  text-align:center;
+}
+
+.hero h2 {
+  font-size:30px;
+  margin-bottom:15px;
+}
+
+.hero p {
+  font-size:16px;
+  max-width:700px;
+  margin:0 auto 30px;
+}
 
 .hero video {
-  width:90%; max-width:600px; border-radius:10px;
+  width:100%;
+  max-width:700px;
+  border-radius:12px;
+}
+
+/* TRUST BAR */
+.trust {
+  background:#fff;
+  padding:30px 20px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  font-weight:bold;
 }
 
 /* SERVICES */
-.services { padding:50px; }
+.services {
+  padding:60px 20px;
+  text-align:center;
+}
+
+.services h2 { margin-bottom:30px; }
 
 .card {
   background:white;
-  padding:20px;
+  padding:25px;
   margin:15px auto;
-  width:80%;
+  width:90%;
   max-width:350px;
-  border-radius:8px;
-  box-shadow:0 3px 8px rgba(0,0,0,.2);
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+  font-size:18px;
 }
 
 /* GALLERY */
-.gallery { padding:50px; }
+.gallery {
+  padding:60px 20px;
+  text-align:center;
+  background:#fff;
+}
 
 .gallery img {
   width:90%;
   max-width:350px;
   margin:10px;
-  border-radius:8px;
+  border-radius:10px;
 }
 
 /* CONTACT */
-.contact { padding:50px; }
+.contact {
+  padding:60px 20px;
+  text-align:center;
+}
+
+.contact h2 { margin-bottom:10px; }
+
+.contact p {
+  max-width:600px;
+  margin:0 auto 25px;
+}
 
 input, textarea {
-  width:80%;
-  padding:12px;
-  margin:10px;
+  width:90%;
+  max-width:500px;
+  padding:14px;
+  margin:10px auto;
   border:1px solid #ccc;
-  border-radius:5px;
+  border-radius:6px;
+  display:block;
 }
 
 button {
-  padding:15px;
-  width:85%;
+  padding:16px;
+  width:90%;
+  max-width:520px;
   background:#0b6b3a;
   color:white;
   border:none;
-  font-size:16px;
+  font-size:18px;
   cursor:pointer;
+  border-radius:6px;
 }
 
-/* SUCCESS MESSAGE */
+/* SUCCESS */
 #success-message {
   display:none;
   color:green;
@@ -72,38 +137,25 @@ button {
   margin-top:20px;
 }
 
-.error {
-  color:red;
-  font-size:14px;
-}
-
 /* FOOTER */
 footer {
   background:#222;
   color:white;
-  padding:30px;
+  padding:40px 20px;
+  text-align:center;
+  font-size:14px;
 }
 </style>
 
 <script>
-// ✅ FULL CONTROL FORM HANDLER (NO ZAPIER REDIRECT)
 function handleSubmit(event) {
   event.preventDefault();
 
   const form = event.target;
   const formData = new FormData(form);
 
-  // BASIC VALIDATION
-  const email = form.email.value;
-  const phone = form.phone.value;
-
-  if (!email.includes("@")) {
-    alert("Enter a valid email");
-    return;
-  }
-
-  if (phone.length < 6) {
-    alert("Enter valid phone");
+  if (!form.email.value.includes("@")) {
+    alert("Please enter a valid email.");
     return;
   }
 
@@ -116,70 +168,80 @@ function handleSubmit(event) {
     document.getElementById("success-message").style.display = "block";
   })
   .catch(() => {
-    alert("Submission failed. Try again.");
+    alert("Submission failed. Please try again.");
   });
 }
 </script>
-
 </head>
 
 <body>
 
 <header>
   <h1>Get It Right Renovations Inc.</h1>
-  <p>Professional Renovation Services in Ontario</p>
+  <p>Burlington’s BBB A+ Rated Renovation Experts</p>
 </header>
 
 <section class="hero">
-  <h2>Transform Your Space</h2>
-  <p>Union Local 27 Certified | Licensed & Insured</p>
+  <h2>Home Renovations Done Right the First Time</h2>
+  <p>
+    Serving Burlington & the GTA since 2016.  
+    Clear planning. Skilled craftsmanship. No shortcuts.
+  </p>
 
-  <video autoplay muted loop>
+  <!-- Optional: replace with your real project video -->
+  <video autoplay muted loop playsinline>
     <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
   </video>
 </section>
 
+<section class="trust">
+  <div>✅ BBB A+ Accredited</div>
+  <div>✅ Established 2016</div>
+  <div>✅ Fully Insured</div>
+  <div>✅ Burlington & GTA</div>
+</section>
+
 <section class="services">
-  <h2>Our Services</h2>
+  <h2>Our Renovation Services</h2>
 
   <div class="card">Kitchen Renovations</div>
-  <div class="card">Bathroom Upgrades</div>
-  <div class="card">General Contracting</div>
+  <div class="card">Bathroom Renovations</div>
+  <div class="card">Basement Finishing</div>
+  <div class="card">Full Home Renovations</div>
 </section>
 
 <section class="gallery">
   <h2>Recent Work</h2>
 
-  <img src="https://picsum.photos/400/300?1">
-  <img src="https://picsum.photos/400/300?2">
-  <img src="https://picsum.photos/400/300?3">
+  <!-- Replace with real project images ASAP -->
+  <img src="https://picsum.photos/400/300?1" alt="Renovation project">
+  <img src="https://picsum.photos/400/300?2" alt="Renovation project">
+  <img src="https://picsum.photos/400/300?3" alt="Renovation project">
 </section>
 
 <section class="contact">
-  <h2>Get Your Free Quote</h2>
+  <h2>Get Your Free Consultation</h2>
+  <p>
+    Tell us about your project. We’ll walk you through next steps — no pressure, no obligation.
+  </p>
 
   <form onsubmit="handleSubmit(event)">
     <input name="name" placeholder="Your Name" required>
     <input name="email" placeholder="Your Email" required>
     <input name="phone" placeholder="Your Phone">
-    <textarea name="message" placeholder="Tell us about your project"></textarea>
+    <textarea name="message" placeholder="Tell us about your renovation"></textarea>
 
-    <button type="submit">Send Request</button>
+    <button type="submit">Request Free Consultation</button>
   </form>
 
-  <p id="success-message">
-    ✅ Request received! We'll contact you shortly.
-  </p>
+  <p id="success-message">✅ Request received! We’ll contact you shortly.</p>
 </section>
 
 <footer>
-  <p>Get It Right Renovations Inc.</p>
+  <p><strong>Get It Right Renovations Inc.</strong></p>
   <p>Ontario Corp #1001363910</p>
-  <p>647‑821‑0132</p>
-
-  <p>
-    Instagram | Facebook
-  </p>
+  <p>📞 647‑821‑0132</p>
+  <p>Serving Burlington & the GTA</p>
 </footer>
 
 </body>
