@@ -1,131 +1,256 @@
 <!DOCTYPE html>
+<!-- SET IN NETLIFY: form notifications to getitrightrenos@gmail.com -->
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Get It Right Renovations Inc.</title>
-  <meta name="description" content="Request a free consultation or project quote. Contact Get It Right Renovations Inc. today.">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Get It Right Renovations Inc.</title>
+<meta name="description" content="Request a free consultation with Get It Right Renovations Inc. — a Peel-based, Local 27 signatory renovation company serving the GTA. We respond within 24 hours.">
+<link rel="icon" href="images/logo.png">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- NAVIGATION -->
-<nav class="navbar">
-  <div class="nav-container">
-    <div class="nav-brand">
-      <a href="index.html">
-        <strong>GET IT RIGHT RENOVATIONS INC.</strong>
-        <small>Professional • Efficient • Clean</small>
-      </a>
-    </div>
-    <button class="menu-btn" aria-label="Toggle Menu">☰</button>
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="tel:+16478210132" class="btn-phone">Call 647-821-0132</a></li>
-    </ul>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Get It Right Renovations Inc. — home">
+      <img src="images/logo.png" alt="Get It Right Renovations logo">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a class="btn small" href="contact.html">Free Consultation</a></li>
+      </ul>
+    </nav>
   </div>
-</nav>
+</header>
 
-<!-- PAGE INTRO -->
-<section class="page-intro">
-  <h1>Request a Consultation</h1>
-  <p>Tell us about your project. We'll respond within 24 hours.</p>
+<section class="page-banner">
+  <div class="container">
+    <h1>Contact</h1>
+    <p>Request a consultation. Tell us about your project — we respond within 24 hours.</p>
+  </div>
 </section>
 
-<!-- CONTACT FORM SECTION -->
-<section class="contact-section">
+<section class="section">
   <div class="container">
-    <div class="contact-form">
-      <form id="contact-form">
-        <div class="form-group">
-          <label for="name">Your Name *</label>
-          <input type="text" id="name" name="name" required placeholder="Full name">
+    <div class="section-head">
+      <h2>Start With a Ballpark</h2>
+      <p>Thirty seconds, no obligation — then request your consultation below.</p>
+    </div>
+    <!-- ESTIMATOR: the ranges in script.js are DRAFT placeholders researched from public GTA cost guides, pending Matthew's correction — see Estimator-Ranges-DRAFT.md -->
+    <div class="estimator" data-estimator style="margin-bottom:38px;">
+      <div class="est-grid">
+        <div>
+          <label>Project type</label>
+          <select class="est-service" aria-label="Project type">
+            <option value="kitchen" selected>Kitchen</option>
+            <option value="bathroom">Bathroom</option>
+            <option value="basement">Basement</option>
+            <option value="fullhome">Full home</option>
+            <option value="deck">Deck</option>
+          </select>
         </div>
-
-        <div class="form-group">
-          <label for="email">Email *</label>
-          <input type="email" id="email" name="email" required placeholder="your@email.com">
+        <div>
+          <label>Approximate size</label>
+          <select class="est-size" aria-label="Approximate size"></select>
         </div>
-
-        <div class="form-group">
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" placeholder="647-xxx-xxxx">
+        <div>
+          <label>Finish level</label>
+          <select class="est-finish" aria-label="Finish level"></select>
         </div>
-
-        <div class="form-group">
-          <label for="message">Tell Us About Your Project</label>
-          <textarea id="message" name="message" placeholder="Describe your renovation needs, timeline, and any specific concerns..."></textarea>
-        </div>
-
-        <div class="form-submit">
-          <button type="submit" class="btn btn-primary">Send Request</button>
-        </div>
-
-        <div class="success-message">
-          ✅ Request received! We'll contact you shortly. For urgent matters, call <a href="tel:+16478210132">647-821-0132</a>.
-        </div>
-      </form>
-
-      <div style="text-align: center; margin-top: 40px; padding-top: 40px; border-top: 1px solid var(--border);">
-        <h3>Other Ways to Reach Us</h3>
-        <p style="font-size: 16px;">
-          <strong>Phone:</strong> <a href="tel:+16478210132">647-821-0132</a><br>
-          <strong>Email:</strong> <a href="mailto:getitrightrenos@gmail.com">getitrightrenos@gmail.com</a><br>
-          <strong>Service Area:</strong> Toronto & GTA
-        </p>
+      </div>
+      <button class="btn blue est-calc" type="button">Get My Ballpark Estimate</button>
+      <div class="est-result" hidden>
+        <p class="est-range"></p>
+        <p class="est-for"></p>
+        <p class="est-disclaimer">Ballpark only — this is not a quote. Your exact price is confirmed at your full consultation, and written quotes are valid for 30 days from the date of issue.</p>
+        <a class="btn est-cta" href="contact.html">Get my detailed estimate</a>
       </div>
     </div>
+
+    <div class="consult-box">
+      <h2>Full Consultation — $150 to $500, credited toward your job</h2>
+      <p>Want an exact, written price instead of a ballpark? Book a full consultation. The fee is quoted per project — between $150 and $500, plus HST — based on what your job needs: permits, drawings, special equipment, bringing in another expert, and distance. We confirm your fee in writing by email before anything is booked, and the fee is paid in advance by Interac e-Transfer to getitrightrenos@gmail.com. Your consultation is booked, and our team is dispatched, only once the fee is received — nobody is sent out before payment.</p>
+      <p>The fee is not an extra cost on top of your renovation: if you sign a contract with Get It Right Renovations within 90 days of your consultation and your project proceeds, the full fee is credited against your contract price. If you decide not to proceed, the fee is payment for the consultation itself. And if we decline your project, we will tell you before any fee is charged — there is no charge. Tick the full-consultation box on the form below and we'll quote your fee when we reply.</p>
+      <p><strong>Your written quote is valid for 30 days</strong> from the date of issue. After that, the quote may be repriced at current rates.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="form-wrap">
+        <h2>Request a Consultation</h2>
+        <p>We review every request and reply within 24 hours if it's a fit. The few questions below help us give you a useful first reply — the more you tell us, the better the answer.</p>
+        <form class="consultation" name="consultation" method="POST" action="/success.html" data-netlify="true">
+          <input type="hidden" name="form-name" value="consultation">
+          <div>
+            <label for="field-name">Your Name *</label>
+            <input id="field-name" type="text" name="name" required autocomplete="name">
+          </div>
+          <div>
+            <label for="field-email">Email *</label>
+            <input id="field-email" type="email" name="email" required autocomplete="email">
+          </div>
+          <div>
+            <label for="field-phone">Phone <span class="optional">(optional)</span></label>
+            <input id="field-phone" type="tel" name="phone" autocomplete="tel">
+          </div>
+          <div>
+            <label for="field-service">Service</label>
+            <select id="field-service" name="service">
+              <option value="">Select a service…</option>
+              <option>Kitchen Renovations</option>
+              <option>Bathroom Renovations</option>
+              <option>Basement Finishing</option>
+              <option>Full Home Renovations</option>
+              <option>Decks</option>
+              <option>Windows &amp; Doors</option>
+              <option>Insulation &amp; Air Sealing</option>
+              <option>Roofing</option>
+              <option>Commercial Renovations</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="field-location">Project location (city) *</label>
+            <input id="field-location" type="text" name="project-location" required autocomplete="address-level2" placeholder="e.g. Brampton, Mississauga, Toronto">
+          </div>
+          <div>
+            <label for="field-budget">Budget range *</label>
+            <select id="field-budget" name="budget-range" required>
+              <option value="">Select a range…</option>
+              <option>Under $10,000</option>
+              <option>$10,000–$25,000</option>
+              <option>$25,000–$50,000</option>
+              <option>$50,000–$100,000</option>
+              <option>Over $100,000</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div>
+            <label for="field-timeline">Timeline *</label>
+            <select id="field-timeline" name="timeline" required>
+              <option value="">Select a timeline…</option>
+              <option>Ready to start now</option>
+              <option>1–3 months</option>
+              <option>3–6 months</option>
+              <option>Just researching</option>
+            </select>
+          </div>
+          <div>
+            <label for="field-own">Do you own the property?</label>
+            <select id="field-own" name="owns-property">
+              <option value="">Select…</option>
+              <option>Yes, I own it</option>
+              <option>I'm buying it</option>
+              <option>I rent it</option>
+            </select>
+          </div>
+          <div>
+            <label for="field-referred-by">Referred by <span class="optional">(optional)</span></label>
+            <input id="field-referred-by" type="text" name="referred_by" placeholder="Who sent you our way? (optional)">
+          </div>
+          <div>
+            <label for="field-details">Tell Us About Your Project</label>
+            <textarea id="field-details" name="project-details" placeholder="Describe your renovation needs, timeline, and any specific concerns…"></textarea>
+          </div>
+          <div class="check-field">
+            <label for="field-consult"><input id="field-consult" type="checkbox" name="full-consultation-interest" value="yes"> <span>I'm interested in a full consultation (quoted $150–$500, paid in advance, credited toward my project)</span></label>
+          </div>
+          <div class="check-field">
+            <label for="field-marketing"><input id="field-marketing" type="checkbox" name="marketing-consent" value="yes"> <span>Yes, send me renovation tips and seasonal offers from Get It Right Renovations. I can unsubscribe at any time.</span></label>
+          </div>
+          <div>
+            <button class="btn" type="submit">Send Request</button>
+          </div>
+        </form>
+      </div>
+      <div>
+        <h2>Other Ways to Reach Us</h2>
+        <p><strong>Email:</strong> <a href="mailto:getitrightrenos@gmail.com">getitrightrenos@gmail.com</a></p>
+        <p><strong>Service area:</strong> Based in Peel — serving the Greater Toronto Area (GTA)</p>
+        <p><strong>Social:</strong> Instagram <a href="https://www.instagram.com/getitrightrenos">@getitrightrenos</a> · Facebook: Get It Right Renovations</p>
+        <p>We respond within 24 hours.</p>
+      </div>
+    </div>
+
+    <div class="privacy-note" id="privacy">
+      <h2>Privacy</h2>
+      <p>We use the information you send us through the consultation and newsletter forms on this site — your name, contact details and project details — only to respond to your request and prepare your estimate and quote, and, if you become a client, to carry out and document your project. If you ticked the offers box, we also use your email address to send you renovation tips and seasonal offers until you unsubscribe. We do not sell your information. Form submissions are processed by Netlify and delivered to getitrightrenos@gmail.com. To ask what information we hold about you, or to have it removed, email getitrightrenos@gmail.com.</p>
+    </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="content-block" style="background: #f9f9f9;">
+<section class="section alt faq">
   <div class="container">
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>Do you handle permits?</h3>
-    <p>Yes. We manage all permits, inspections, and documentation to ensure your project is code-compliant and fully licensed.</p>
-
-    <h3>Are you licensed & insured?</h3>
-    <p>Fully. We carry comprehensive general liability, workers' compensation, and project insurance.</p>
-
-    <h3>Do you do commercial work?</h3>
-    <p>Yes. We handle residential, commercial, and institutional projects including office renovations, tenant improvements, and maintenance contracts.</p>
-
-    <h3>Can you help with government rebates?</h3>
-    <p>Absolutely. We guide you through eligibility, help complete applications, and ensure your project qualifies for all available federal and provincial incentives.</p>
-
-    <h3>What areas do you serve?</h3>
-    <p>We serve Toronto and the Greater Toronto Area (GTA). Contact us to discuss your specific location.</p>
-
-    <h3>How long does a typical project take?</h3>
-    <p>Timelines vary by project scope. We provide detailed schedules during the consultation phase and always communicate any changes upfront.</p>
+    <div class="section-head">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <details>
+      <summary>Do you handle permits?</summary>
+      <p>Where a building, plumbing or electrical permit is required for your project, it is applied for before that work starts and inspections are booked as the work proceeds. Electrical work is done by a licensed electrical contractor and inspected by the Electrical Safety Authority; plumbing work is done by licensed plumbers.</p>
+    </details>
+    <details>
+      <summary>Are you insured?</summary>
+      <p>Yes — we are fully insured, and certificates are available on request.</p>
+    </details>
+    <details>
+      <summary>Do you do commercial work?</summary>
+      <p>Yes. We handle residential, commercial, and institutional projects including office renovations, tenant improvements, and maintenance contracts.</p>
+    </details>
+    <details>
+      <summary>Can you help with government rebates?</summary>
+      <p>Absolutely. We guide you through eligibility, help complete applications, and ensure your project qualifies for available federal and provincial incentives, including Ontario's Home Renovation Savings Program.</p>
+    </details>
+    <details>
+      <summary>What areas do you serve?</summary>
+      <p>We're based in Peel and serve the Greater Toronto Area (GTA). Contact us to discuss your specific location.</p>
+    </details>
+    <details>
+      <summary>How long does a typical project take?</summary>
+      <p>Timelines vary by project scope. We provide detailed schedules during the consultation phase and always communicate any changes upfront.</p>
+    </details>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container footer-content">
-    <div>
-      <h4>Get It Right Renovations Inc.</h4>
-      <p>Union Local 27 Carpenters<br>Toronto & GTA</p>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Get It Right Renovations logo">
+        <p style="margin-top:14px;">Get It Right Renovations Inc.<br>A signatory to Local 27 — unionized craftsmanship.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:getitrightrenos@gmail.com">getitrightrenos@gmail.com</a></p>
+        <p>Based in Peel · Serving the Greater Toronto Area (GTA)</p>
+        <p>Instagram: <a href="https://www.instagram.com/getitrightrenos">@getitrightrenos</a><br>Facebook: Get It Right Renovations</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="about.html">About Us</a><br>
+        <a href="services.html">Services</a><br>
+        <a href="gallery.html">Gallery</a><br>
+        <a href="contact.html">Request a Consultation</a></p>
+      </div>
     </div>
-    <div>
-      <p><strong>Contact</strong></p>
-      <p><a href="tel:+16478210132">647‑821‑0132</a></p>
-      <p><a href="mailto:getitrightrenos@gmail.com">getitrightrenos@gmail.com</a></p>
+    <div class="newsletter">
+      <h3>Renovation tips &amp; seasonal offers</h3>
+      <p>Occasional emails with renovation planning tips and seasonal offers. No spam, ever.</p>
+      <form class="newsletter-form" name="newsletter" method="POST" action="/success.html" data-netlify="true">
+        <input type="hidden" name="form-name" value="newsletter">
+        <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
+        <button class="btn small" type="submit">Sign Up</button>
+        <label class="newsletter-consent"><input type="checkbox" name="marketing-consent" value="yes"> <span>Yes, send me renovation tips and seasonal offers from Get It Right Renovations. I can unsubscribe at any time.</span></label>
+      </form>
     </div>
-    <div>
-      <p><strong>Follow</strong></p>
-      <p><a href="https://instagram.com/getitrightrenos" target="_blank">Instagram</a></p>
-      <p><a href="https://facebook.com/getitrightrenos" target="_blank">Facebook</a></p>
+    <div class="smallprint">
+      © 2026 Get It Right Renovations Inc. All rights reserved. · Ontario Corporation #1001363910 · <a href="contact.html#privacy">Privacy note</a>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; <span id="year"></span> Get It Right Renovations Inc. All rights reserved.</p>
   </div>
 </footer>
 
