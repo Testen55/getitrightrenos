@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Get It Right Renovations Inc.</title>
-<meta name="description" content="Request a free consultation with Get It Right Renovations Inc. — a Peel-based, Local 27 signatory renovation company serving the GTA. We respond within 24 hours.">
+<meta name="description" content="Request a consultation with Get It Right Renovations Inc. — a Peel-based, Local 27 signatory renovation company serving the GTA. Tell us about your project and we'll take a proper look before we reply.">
 <link rel="icon" href="images/logo.png">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -22,9 +22,10 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products &amp; Packages</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html" aria-current="page">Contact</a></li>
-        <li><a class="btn small" href="contact.html">Free Consultation</a></li>
+        <li><a class="btn small" href="contact.html#ballpark">Free Ballpark Estimate</a></li>
       </ul>
     </nav>
   </div>
@@ -33,7 +34,7 @@
 <section class="page-banner">
   <div class="container">
     <h1>Contact</h1>
-    <p>Request a consultation. Tell us about your project — we respond within 24 hours.</p>
+    <p>Request a consultation. Tell us about your project and we'll take a proper look before we reply.</p>
   </div>
 </section>
 
@@ -44,7 +45,7 @@
       <p>Thirty seconds, no obligation — then request your consultation below.</p>
     </div>
     <!-- ESTIMATOR: the ranges in script.js are DRAFT placeholders researched from public GTA cost guides, pending Matthew's correction — see Estimator-Ranges-DRAFT.md -->
-    <div class="estimator" data-estimator style="margin-bottom:38px;">
+    <div class="estimator" id="ballpark" data-estimator style="margin-bottom:38px;">
       <div class="est-grid">
         <div>
           <label>Project type</label>
@@ -69,12 +70,12 @@
       <div class="est-result" hidden>
         <p class="est-range"></p>
         <p class="est-for"></p>
-        <p class="est-disclaimer">Ballpark only — this is not a quote. Your exact price is confirmed at your full consultation, and written quotes are valid for 30 days from the date of issue.</p>
+        <p class="est-disclaimer">Ballpark only — this is not a quote. Your exact price is confirmed at your full consultation, and written quotes are valid for 30 days from the date of issue. Ballpark figures exclude HST, permit fees and any third-party or consultant fees; if those apply to your project they are confirmed in writing before any work is booked.</p>
         <a class="btn est-cta" href="contact.html">Get my detailed estimate</a>
       </div>
     </div>
 
-    <div class="consult-box">
+    <div class="consult-box" id="consultation">
       <h2>Full Consultation — $150 to $500, credited toward your job</h2>
       <p>Want an exact, written price instead of a ballpark? Book a full consultation. The fee is quoted per project — between $150 and $500, plus HST — based on what your job needs: permits, drawings, special equipment, bringing in another expert, and distance. We confirm your fee in writing by email before anything is booked, and the fee is paid in advance by Interac e-Transfer to getitrightrenos@gmail.com. Your consultation is booked, and our team is dispatched, only once the fee is received — nobody is sent out before payment.</p>
       <p>The fee is not an extra cost on top of your renovation: if you sign a contract with Get It Right Renovations within 90 days of your consultation and your project proceeds, the full fee is credited against your contract price. If you decide not to proceed, the fee is payment for the consultation itself. And if we decline your project, we will tell you before any fee is charged — there is no charge. Tick the full-consultation box on the form below and we'll quote your fee when we reply.</p>
@@ -84,7 +85,7 @@
     <div class="two-col">
       <div class="form-wrap">
         <h2>Request a Consultation</h2>
-        <p>We review every request and reply within 24 hours if it's a fit. The few questions below help us give you a useful first reply — the more you tell us, the better the answer.</p>
+        <p>We review every request and reply when we've had a proper look — usually within 2 business days. The few questions below help us give you a useful first reply — the more you tell us, the better the answer.</p>
         <form class="consultation" name="consultation" method="POST" action="/success.html" data-netlify="true">
           <input type="hidden" name="form-name" value="consultation">
           <div>
@@ -96,8 +97,8 @@
             <input id="field-email" type="email" name="email" required autocomplete="email">
           </div>
           <div>
-            <label for="field-phone">Phone <span class="optional">(optional)</span></label>
-            <input id="field-phone" type="tel" name="phone" autocomplete="tel">
+            <label for="field-phone">Phone *</label>
+            <input id="field-phone" type="tel" name="phone" required autocomplete="tel">
           </div>
           <div>
             <label for="field-service">Service</label>
@@ -172,9 +173,11 @@
       <div>
         <h2>Other Ways to Reach Us</h2>
         <p><strong>Email:</strong> <a href="mailto:getitrightrenos@gmail.com">getitrightrenos@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+18667973667">1-866-797-3667</a></p>
+        <p><strong>Mailing address:</strong> 45 Bramalea Rd, Suite 208 - 598, Brampton, ON L6T 2W4</p>
         <p><strong>Service area:</strong> Based in Peel — serving the Greater Toronto Area (GTA)</p>
         <p><strong>Social:</strong> Instagram <a href="https://www.instagram.com/getitrightrenos">@getitrightrenos</a> · Facebook: Get It Right Renovations</p>
-        <p>We respond within 24 hours.</p>
+        <p>We review every request and reply when we've had a proper look — usually within 2 business days. This is not an emergency service: if your project involves active water, heat, electrical or structural risk, contact the appropriate emergency or utility service first.</p>
       </div>
     </div>
 
@@ -196,15 +199,15 @@
     </details>
     <details>
       <summary>Are you insured?</summary>
-      <p>Yes — we are fully insured, and certificates are available on request.</p>
+      <p>Insurance details are provided in writing before a contract is signed.</p>
     </details>
     <details>
       <summary>Do you do commercial work?</summary>
-      <p>Yes. We handle residential, commercial, and institutional projects including office renovations, tenant improvements, and maintenance contracts.</p>
+      <p>Yes — office and retail renovations, tenant improvements, accessibility upgrades and maintenance contracts.</p>
     </details>
     <details>
       <summary>Can you help with government rebates?</summary>
-      <p>Absolutely. We guide you through eligibility, help complete applications, and ensure your project qualifies for available federal and provincial incentives, including Ontario's Home Renovation Savings Program.</p>
+      <p>We can point you to programs that may apply and explain, in general terms, how they work. Eligibility and amounts are decided by the program, not by us — confirm your eligibility with the program before you count on any amount.</p>
     </details>
     <details>
       <summary>What areas do you serve?</summary>
@@ -227,6 +230,8 @@
       <div>
         <h3>Contact</h3>
         <p>Email: <a href="mailto:getitrightrenos@gmail.com">getitrightrenos@gmail.com</a></p>
+        <p>Phone: <a href="tel:+18667973667">1-866-797-3667</a></p>
+        <p>Mailing address: 45 Bramalea Rd, Suite 208 - 598,<br>Brampton, ON L6T 2W4</p>
         <p>Based in Peel · Serving the Greater Toronto Area (GTA)</p>
         <p>Instagram: <a href="https://www.instagram.com/getitrightrenos">@getitrightrenos</a><br>Facebook: Get It Right Renovations</p>
       </div>
@@ -249,7 +254,7 @@
       </form>
     </div>
     <div class="smallprint">
-      © 2026 Get It Right Renovations Inc. All rights reserved. · Ontario Corporation #1001363910 · <a href="contact.html#privacy">Privacy note</a>
+      © 2026 Get It Right Renovations Inc. All rights reserved. · Ontario Corporation #002542194 · <a href="contact.html#privacy">Privacy note</a>
     </div>
   </div>
 </footer>
