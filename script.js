@@ -143,7 +143,24 @@
       result.hidden = true;
     }
     svc.addEventListener("change", refresh);
+    size.addEventListener("change", function () { result.hidden = true; });
+    fin.addEventListener("change", function () { result.hidden = true; });
     refresh();
+
+    // Arriving from the Home estimator CTA: apply the carried selection.
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var pSvc = params.get("service");
+      if (pSvc && EST[pSvc]) {
+        svc.value = pSvc;
+        refresh();
+        var pSize = parseInt(params.get("size"), 10);
+        var pFin = parseInt(params.get("finish"), 10);
+        if (!isNaN(pSize) && size.options[pSize]) size.selectedIndex = pSize;
+        if (!isNaN(pFin) && fin.options[pFin]) fin.selectedIndex = pFin;
+        btn.click();
+      }
+    } catch (err) { /* parameters are an enhancement only */ }
 
     btn.addEventListener("click", function () {
       var cfg = EST[svc.value];
@@ -160,10 +177,19 @@
 
     if (cta) {
       cta.addEventListener("click", function (e) {
-        var formSel = document.querySelector('form.consultation select[name="service"]');
-        if (!formSel) return; // no form on this page — follow the link to Contact
-        e.preventDefault();
         var want = EST[svc.value].form;
+        var formSel = document.querySelector('form.consultation select[name="service"]');
+        if (!formSel) {
+          // No consultation form on this page (e.g. Home): carry the
+          // estimator selection to the Contact page estimator + form.
+          e.preventDefault();
+          var qs = "service=" + encodeURIComponent(svc.value) +
+            "&size=" + encodeURIComponent(size.selectedIndex) +
+            "&finish=" + encodeURIComponent(fin.selectedIndex);
+          window.location.href = cta.getAttribute("href") + "?" + qs + "#ballpark";
+          return;
+        }
+        e.preventDefault();
         for (var i = 0; i < formSel.options.length; i++) {
           if (formSel.options[i].text === want) { formSel.selectedIndex = i; break; }
         }

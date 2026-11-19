@@ -37,6 +37,9 @@
   .brand-name span { display: block; font-size: 0.78rem; font-weight: 600; color: var(--muted); }
   .header-right { margin-left: auto; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
   .header-phone { font-weight: 800; color: var(--ink); text-decoration: none; font-size: 1.05rem; }
+  .main-nav ul { display: flex; flex-wrap: wrap; gap: 4px 18px; list-style: none; margin: 0; padding: 0; }
+  .main-nav a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+  .main-nav a:hover { color: var(--blue); }
 
   /* Hero */
   .hero { background: linear-gradient(120deg, #082032 0%, var(--blue-dark) 70%, var(--blue) 100%); color: #fff; padding: 58px 0 50px; }
@@ -87,9 +90,19 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand-name" href="index.html">Get It Right Renovations Inc.<span>You dream it, we build it.</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html" aria-current="page">Products &amp; Packages</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
     <div class="header-right">
       <a class="header-phone" href="tel:+18667973667">1-866-797-3667</a>
-      <a class="btn small" href="https://square.link/u/54wERGnT">Book a consultation</a>
+      <a class="btn small" href="https://square.link/u/VeZCf7Pg">Book a consultation — Pay by card</a>
     </div>
   </div>
 </header>
@@ -105,7 +118,7 @@
   <ul>
     <li>Local 27 signatory</li>
     <li>Ontario Corporation #002542194</li>
-    <li>Our installation workmanship is warranted by us</li>
+    <li>Our installation workmanship is covered by the workmanship terms in your written contract</li>
     <li>Written quotes good for 30 days</li>
   </ul>
 </div>
@@ -114,7 +127,8 @@
   <div class="container">
     <div class="section-head">
       <h2>Shop Products</h2>
-      <p>Products we sell ourselves. Every item passed our 5-point check — Canadian certification marks where they apply, the licensed trade named, the current Ontario Building Code. How buying works: you pay by card, we source the product from the Canadian supplier named on its card after your payment lands, and the supplier or seller delivers it to your home, coordinated with your install date. We coordinate the timing and do the install — we don't warehouse or freight products.</p>
+      <p>Products on this page are sold directly by Get It Right Renovations Inc., except media-room gear in Package 8, which the client buys in the client’s own name — receipts and warranties stay in the client’s name. Every item is checked before it’s listed — spec, current price, certification marks where they apply, and the licensed trade the install needs. How buying works: you pay by card, we source the product from the Canadian supplier named on its card after your payment lands, and the supplier or seller delivers it to your home, coordinated with your install date. We coordinate the timing and do the install — we don’t warehouse or freight products.</p>
+      <p><strong>Paying by card:</strong> You’ll enter the amount from your quote or product card on the secure Square page — we confirm every order by email before anything is sourced.</p>
     </div>
     <div class="grid">
 
@@ -123,19 +137,19 @@
         <span class="rec-tag">★ Our recommendation — outdoor TVs</span>
         <h3>Samsung The Terrace 55" (QN55LST7DAFXZC) — Weather-Rated Outdoor TV</h3>
         <p>For gazebos, patios and outdoor rooms — a TV built to live outside.</p>
-        <p class="pkg-price">Price: $4,799.99 CAD — Electronics For Less Canada, read Nov 9, 2026, in stock.</p>
+        <p class="pkg-price">Price: $3,299.99 CAD — Electronics For Less Canada, read Nov 19, 2026, in stock.</p>
         <p>Sold at Canadian retail, inside a quoted outdoor package — outdoor scope is quoted per site, so this one starts with a consultation.</p>
         <p class="fee-line">Consultation: $150–$500 + HST, credited in full when you sign within 90 days.</p>
-        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Book a consultation — pay by card</a></p>
+        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/VeZCf7Pg">Pay by card</a></p>
       </div>
 
       <div class="card">
         <figure><img src="https://multimedia.bbycastatic.ca/multimedia/products/500x500/192/19204/19204134.jpg" alt="Samsung HW-Q600F soundbar with wireless subwoofer"></figure>
         <h3>Samsung HW-Q600F/ZC — 3.1.2 Dolby Atmos Soundbar + Wireless Subwoofer</h3>
         <p>For the Complete-to-Play setup — mounted and tuned in the Setup Visit, not left in a box on the porch.</p>
-        <p class="pkg-price">Price: $699.99 CAD — Best Buy Canada, read Nov 9, 2026.</p>
-        <p>Honest note: Amazon.ca has sold this bar far below list (~$399.99), so some weeks you can find it cheaper there. We check the week of your job and source it where it's cheaper, after your payment.</p>
-        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Buy — pay by card</a></p>
+        <p class="pkg-price">Price: $399.99 CAD — Best Buy Canada, read Nov 19, 2026 (sale price; regular price $699.99).</p>
+        <p>Honest note: this bar’s price moves with Best Buy’s sales, and Amazon.ca has matched the sale price some weeks. We check the week of your job and source it where it’s cheaper, after your payment.</p>
+        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Pay by card</a></p>
       </div>
 
       <div class="card">
@@ -144,45 +158,20 @@
         <p>For the outdoor/gazebo standard — big-screen gaming and movie nights outside.</p>
         <p class="pkg-price">Price: $1,500 CAD — DirectDial Canada, read Nov 9, 2026, in stock.</p>
         <p>Canadian retail, sold bundled with the outdoor/gazebo setup quote. Channel prices move — this projector read $1,399.99 at Best Buy Canada in late October 2026 — so we recheck the price at order time.</p>
-        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Buy — pay by card</a></p>
+        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Pay by card</a></p>
       </div>
 
-      <div class="card">
-        <figure><div class="ph">BenQ TK710STi — 4K Laser Short-Throw Gaming Projector</div></figure>
-        <h3>BenQ TK710STi — 4K Laser Short-Throw Gaming Projector</h3>
-        <p>For Room Builds — a huge picture from a short distance, set up by people who know short-throw.</p>
-        <p class="pkg-price">Price: $2,598 CAD — Visions Electronics Canada, read Nov 9, 2026 (Best Buy Canada and Canada Computers both list $2,599.99).</p>
-        <p>Brand hardware pricing is manufacturer-controlled — a $2 spread across three retailers. We match Canadian retail; the value is the short-throw expertise and the install.</p>
-        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Buy — pay by card</a></p>
-      </div>
 
       <div class="card">
         <figure><img src="https://cdn.shopify.com/s/files/1/0559/0102/8558/files/H6099-KV-m.jpg?v=1762155411&amp;width=800" alt="Govee TV Backlight 3 Lite — TV backlight strip and camera"></figure>
         <h3>Govee TV Backlight 3 Lite Kit — 11.8ft RGBICW Strip + Camera</h3>
         <p>For every Setup Visit — bias lighting that reacts to what's on screen. The kit adds light bars to the strip and camera.</p>
-        <p class="pkg-price">Price: Kit $199.99 CAD — verified on Amazon.ca, Nov 7, 2026. Base strip + camera (H6099): $89.99 CAD sale / $119.99 list — Govee Canada store, read Nov 9, 2026.</p>
+        <p class="pkg-price">Price: two options. Full Kit with light bars: $199.99 CAD — Amazon.ca, read Nov 7, 2026 (the kit price is rechecked at order time). Base strip + camera (H6099) on its own: $119.99 CAD list — Amazon.ca, read Nov 19, 2026.</p>
         <p>Two options — the base strip + camera, or the full Kit with light bars. We recommend the Kit: the bars carry the light into the room, not just behind the screen. The lighting is fitted inside the Setup Visit.</p>
-        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Buy — pay by card</a></p>
+        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Pay by card</a></p>
       </div>
 
-      <div class="card">
-        <figure><div class="ph">Barkan BM343 Full Motion TV Wall Mount (13"–65")</div></figure>
-        <h3>Barkan BM343 Full Motion TV Wall Mount (13"–65")</h3>
-        <p>For any Setup Visit — no visit should ever wait on a client guessing a mount.</p>
-        <p class="pkg-price">Price: $89.98 CAD — Home Depot Canada.</p>
-        <p>Price from our Nov 1, 2026 Home Depot Canada reference — rechecked before we order, and confirmed with you if it has moved. Sold with the Setup Visit as a named materials line at cost — mounts are never buried inside the labour flat. Discrete parts (wall boxes, cables, raceway) are named lines the same way; ordinary consumables ride inside the visit.</p>
-        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Buy — pay by card</a></p>
-      </div>
 
-      <div class="card">
-        <figure><img src="https://grizzl-e.com/_next/image?url=https%3A%2F%2Fecommerce-space.nyc3.digitaloceanspaces.com%2Fgrz-classic-img-1-1760117474587.webp&amp;w=3840&amp;q=50" alt="Grizzl-E Classic Connect 40A Level 2 EV charger"></figure>
-        <span class="rec-tag">★ Our recommendation — EV chargers</span>
-        <h3>Grizzl-E Classic Connect 40A — Level 2 EV Charger</h3>
-        <p>Made in Canada (United Chargers, Ontario) — a 40A Level 2 smart charger in a cast-metal case, plug-in NEMA 14-50 with J1772 or NACS connector, built for Canadian winters. We recommend it: Canadian-made, metal case, priced under the premium brands.</p>
-        <p class="pkg-price">Price: $449.99 CAD sale / $499.99 CAD list — United Chargers' Canadian store (grizzl-e.com/ca), read Nov 9, 2026.</p>
-        <p class="trade-line">Installation is electrical work: it is done by a Licensed Electrical Contractor, with ESA notification/inspection and a load calculation first. Get It Right sells the charger and coordinates the install — we don't do the electrical work ourselves.</p>
-        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Buy — pay by card</a></p>
-      </div>
 
       <div class="card">
         <figure><img src="https://store.flo.com/cdn/shop/files/NEW_FLO-Home-X6-J1772-Silver-Connector-Front-white.jpg?v=1784656683&amp;width=1080" alt="FLO Home X6 smart Level 2 EV charger"></figure>
@@ -190,7 +179,7 @@
         <p>Designed and manufactured in Canada (Shawinigan, Quebec) — a premium smart Level 2 charger, up to 50A (12 kW), Wi-Fi scheduling in the FLO app, aluminum enclosure rated to −40°C, 5-year warranty.</p>
         <p class="pkg-price">Price: $899.00 CAD — FLO's own store (store.flo.com), read Nov 9, 2026, in stock.</p>
         <p class="trade-line">Installation is electrical work: it is done by a Licensed Electrical Contractor, with ESA notification/inspection and a load calculation first. Get It Right sells the charger and coordinates the install — we don't do the electrical work ourselves.</p>
-        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Buy — pay by card</a></p>
+        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Pay by card</a></p>
       </div>
 
       <div class="card">
@@ -198,58 +187,16 @@
         <span class="rec-tag">★ Our recommendation — fireplaces</span>
         <h3>Napoleon Elevation X 36 Electric Fireplace (NEFB36LCD-MF)</h3>
         <p>A built-in electric fireplace with LCD virtual flames and crackling sound — no chimney, no venting, no gas line; 5,000 BTU plug-in or 10,000 BTU when hardwired at 240V, and it frames into the same rough opening as Napoleon's gas models.</p>
-        <p class="pkg-price">Price: from $3,769 CAD (MSRP $4,019 CAD), base unit — Napoleon (napoleon.com), read Nov 9, 2026. The starting price excludes installation and additional required items.</p>
+        <p class="pkg-price">Price: from $4,019 CAD, base unit — Napoleon (napoleon.com), read Nov 19, 2026. The starting price excludes installation and additional required items.</p>
         <p class="trade-line">Electric, so no licensed-trade install is required beyond normal installation. It plugs into a standard outlet; if it's hardwired instead, that connection is electrical work and is done by a licensed electrician.</p>
         <p class="deliver-line">Delivered by the supplier to your home — we coordinate the date with your install.</p>
         <p class="fee-line">Consultation: $150–$500 + HST, credited in full when you sign within 90 days.</p>
-        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Book a consultation — pay by card</a></p>
+        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/VeZCf7Pg">Pay by card</a></p>
       </div>
 
-      <div class="card">
-        <figure><div class="ph">Hydropool Serenity 4300 — 3–4 Person Hot Tub</div></figure>
-        <h3>Hydropool Serenity 4300 — 3–4 Person Hot Tub</h3>
-        <p>A compact 4-person acrylic hot tub made in Mississauga, Ontario — lounger plus three hydrotherapy seats, 31 jets, sized for smaller patios, decks and yards.</p>
-        <p class="pkg-price">Price: from $12,795 CAD — Hydropool (hydropoolhottubs.com), read Nov 9, 2026.</p>
-        <p class="trade-line">The 240V electrical hookup is done by a Licensed Electrical Contractor with ESA inspection — Get It Right coordinates it, and we can build the pad/base the tub sits on. A tub this size is quoted per site (delivery, base, electrical), so this one starts with a consultation.</p>
-        <p class="deliver-line">Delivered by the supplier to your home — we coordinate the date with your install.</p>
-        <p class="fee-line">Consultation: $150–$500 + HST, credited in full when you sign within 90 days.</p>
-        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Book a consultation — pay by card</a></p>
-      </div>
 
-      <div class="card">
-        <figure><div class="ph">Dundalk LeisureCraft Canadian Timber Harmony Barrel Sauna</div></figure>
-        <h3>Dundalk LeisureCraft Canadian Timber Harmony Barrel Sauna</h3>
-        <p>An Ontario-made cedar barrel sauna kit from Canada's oldest sauna maker — 6′ × 6′ barrel, 2–4 person, Eastern white cedar. We assemble it on your site; made to order, with the heater selected at order time.</p>
-        <p class="pkg-price">Price: $7,841.40 CAD (current sale price, Harmony 6′ × 6′) — Backyard Canada (backyardcanada.ca), read Nov 9, 2026.</p>
-        <p class="trade-line">We assemble the kit and can build the level base it sits on. An electric heater runs on 240V, and that hookup is done by a Licensed Electrical Contractor. Made to order — lead time is confirmed when you order.</p>
-        <p class="deliver-line">Delivered by the supplier to your home — we coordinate the date with your install.</p>
-        <p class="fee-line">Consultation: $150–$500 + HST, credited in full when you sign within 90 days.</p>
-        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Book a consultation — pay by card</a></p>
-      </div>
 
-      <div class="card">
-        <figure><div class="ph">Farley Windows — Vinyl Casement Window with Vertex3 Tech, 24" × 48"</div></figure>
-        <span class="es-tag">ENERGY STAR® certified pick</span>
-        <h3>Farley Windows — Vinyl Casement Window with Vertex3 Tech (24" × 48")</h3>
-        <p>Canadian-made, ENERGY STAR® certified vinyl casement windows — one representative size shown; every opening is measured and the line is priced per size.</p>
-        <p class="pkg-price">Price: $493.00 CAD each for the 24" × 48" casement shown — Home Depot Canada, read Nov 9, 2026. Priced per size; measured and quoted per opening.</p>
-        <p class="trade-line">ENERGY STAR® certified. Windows are a measured product: sizes, egress and final pricing are confirmed per opening at quote, so window work starts with a consultation.</p>
-        <p class="deliver-line">Delivered by the supplier to your home — we coordinate the date with your install.</p>
-        <p class="fee-line">Consultation: $150–$500 + HST, credited in full when you sign within 90 days.</p>
-        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Book a consultation — pay by card</a></p>
-      </div>
 
-      <div class="card">
-        <figure><div class="ph">Masonite 6-Panel Prehung Steel Entry Door, 32" × 80"</div></figure>
-        <span class="es-tag">ENERGY STAR® certified pick</span>
-        <h3>Masonite 6-Panel Prehung Steel Entry Door (32" × 80")</h3>
-        <p>An ENERGY STAR® certified prehung steel entry door — insulated core, and it arrives with frame, hinges, weatherstripping and aluminum sill for a clean, fast replacement.</p>
-        <p class="pkg-price">Price: $489.99 CAD — RONA Canada (rona.ca), read Nov 9, 2026.</p>
-        <p class="trade-line">ENERGY STAR® certified per RONA's listing. Supplied and installed as a complete prehung unit; handing, size and lock boring are confirmed at order.</p>
-        <p class="deliver-line">Delivered by the supplier to your home — we coordinate the date with your install.</p>
-        <p class="fee-line">Consultation: $150–$500 + HST, credited in full when you sign within 90 days.</p>
-        <p class="pkg-btn"><a class="btn blue" href="https://square.link/u/54wERGnT">Book a consultation — pay by card</a></p>
-      </div>
 
     </div>
   </div>
@@ -272,7 +219,7 @@
         <p><strong>The gear:</strong> the client buys the TV, console and audio gear — receipts in the client's name, and the warranties stay the client's. Mounts, wall boxes and cables we supply are named materials lines at cost on the invoice; ordinary consumables ride inside the visit flat.</p>
         <p class="pkg-price">Price basis: Setup Visit billed hourly at the carpentry band $95–$135/hr — journeyperson-performed work bills the carpentry band, and there is no project minimum on an hourly visit; the quote states the expected hours in writing before the visit. Room Build at carpentry $95–$135/hr; $2,500 project minimum; permits at cost.</p>
         <p class="fee-line">Consultation: $150–$500 + HST, credited in full when you sign within 90 days.</p>
-        <p class="pkg-btn"><a class="btn" href="https://square.link/u/54wERGnT">Pay booking fee by card</a> <a class="btn blue" href="https://square.link/u/54wERGnT">Book a consultation</a></p>
+        <p class="pkg-btn"><a class="btn" href="https://square.link/u/VeZCf7Pg">Pay by card</a> <a class="btn blue" href="https://square.link/u/VeZCf7Pg">Pay by card</a></p>
       </div>
 
       <div class="card">
@@ -280,7 +227,7 @@
         <p>For basements and full-home renovations. We do site prep and a level base; framing, bench and finish carpentry; insulation and vapour control in the sauna room. The sauna kit itself is supplied by the client.</p>
         <p class="trade-line"><strong>Licensed partner does:</strong> the dedicated heater circuit — a Licensed Electrical Contractor, ESA-notified, named as its own line on the quote at the electrician's price.</p>
         <p class="pkg-price">Price basis: carpentry $95–$135/hr; coordination/supervision at the general contractor band $115–$150/hr where it applies. $2,500 project minimum; permits at cost.</p>
-        <p class="pkg-btn"><a class="btn blue small" href="https://square.link/u/54wERGnT">Book — pay by card</a></p>
+        <p class="pkg-btn"><a class="btn blue small" href="https://square.link/u/VeZCf7Pg">Pay by card</a></p>
       </div>
 
       <div class="card">
@@ -288,7 +235,7 @@
         <p>For decks and full-home projects. We build the base — gravel pad, concrete pad, or deck reinforcement built for the filled weight of the tub — plus privacy screens and fencing carpentry, and coordinate delivery day and placement. Filled-tub loads are calculated, not guessed. The hot tub itself is supplied by the client; fence, enclosure and permit requirements are confirmed with your municipality before quoting.</p>
         <p class="trade-line"><strong>Licensed partner does:</strong> the 240V GFCI circuit — a Licensed Electrical Contractor with ESA notification, named as its own line on the quote.</p>
         <p class="pkg-price">Price basis: carpentry $95–$135/hr; coordination at the general contractor band $115–$150/hr. $2,500 project minimum.</p>
-        <p class="pkg-btn"><a class="btn blue small" href="https://square.link/u/54wERGnT">Book — pay by card</a></p>
+        <p class="pkg-btn"><a class="btn blue small" href="https://square.link/u/VeZCf7Pg">Pay by card</a></p>
       </div>
 
       <div class="card">
@@ -296,7 +243,7 @@
         <p>For full-home and commercial clients. We coordinate the whole install and handle the carpentry side — charger mounting, cable management, garage finishes. The charger unit is supplied by the client unless a written quote says we supply it.</p>
         <p class="trade-line"><strong>Licensed partner does:</strong> the load calculation, panel work and the charger install itself — a Licensed Electrical Contractor, with ESA notification and inspection. The install is always the licensed contractor's work — never carpenter-installed electrical work.</p>
         <p class="pkg-price">Price basis: coordination at the general contractor band $115–$150/hr (commercial $105–$150/hr); the electrical scope is the Licensed Electrical Contractor's own quoted line. Permits at cost.</p>
-        <p class="pkg-btn"><a class="btn blue small" href="https://square.link/u/54wERGnT">Book — pay by card</a></p>
+        <p class="pkg-btn"><a class="btn blue small" href="https://square.link/u/VeZCf7Pg">Pay by card</a></p>
       </div>
 
       <div class="card">
@@ -304,7 +251,7 @@
         <p>For exterior and deck work — the spring package. Cedar raised boxes built to size, set level, filled and finished; assembly and anchoring of the client's grow tower. The grow tower itself is supplied by the client.</p>
         <p class="trade-line"><strong>Licensed partner does:</strong> a dedicated water line or drip feed only if it ties into household plumbing — a licensed plumber. A hose-bib connection is quoted as-is and described honestly as exactly that.</p>
         <p class="pkg-price">Price basis: carpentry $95–$135/hr. Project-class work carries the $2,500 minimum; small streamed builds bill hourly on the rate card instead — the quote says which, in writing.</p>
-        <p class="pkg-btn"><a class="btn blue small" href="https://square.link/u/54wERGnT">Book — pay by card</a></p>
+        <p class="pkg-btn"><a class="btn blue small" href="https://square.link/u/VeZCf7Pg">Pay by card</a></p>
       </div>
 
       <div class="card">
@@ -312,7 +259,7 @@
         <p>For new parents and grandparents — one scheduled visit. Furniture and TV anti-tip anchoring into studs; gate hardware at stair tops and bottoms; cabinet and toilet latches; outlet covers; cord management. Hardware is installed to the manufacturer's instructions, and is supplied by the client unless a written quote says we supply it.</p>
         <p class="trade-line"><strong>Licensed work:</strong> none normally required — anything that touches household wiring routes to a Licensed Electrical Contractor and is named on the quote.</p>
         <p class="pkg-price">Price basis: hourly visit work billed at the rate-card band for the work performed — journeyperson-performed work bills at the carpentry band. This is hourly work, not a $2,500-minimum project; the quote states the basis in writing.</p>
-        <p class="pkg-btn"><a class="btn blue small" href="https://square.link/u/54wERGnT">Book — pay by card</a></p>
+        <p class="pkg-btn"><a class="btn blue small" href="https://square.link/u/VeZCf7Pg">Pay by card</a></p>
       </div>
 
       <div class="card">
@@ -320,7 +267,7 @@
         <p>For kitchens, bathrooms and full-home renovations. We do the carpentry side of pot-light layouts in finished ceilings and coordinate the electrical scope as one quoted job with the trades named. Fixtures are selected and supplied by the client.</p>
         <p class="trade-line"><strong>Licensed partner does:</strong> all fixture wiring, swap-outs, new circuits and switching — a Licensed Electrical Contractor. If a smart switch needs a neutral or a box change, that is the electrician's line on the quote, in writing.</p>
         <p class="pkg-price">Price basis: carpentry $95–$135/hr; coordination at the general contractor band $115–$150/hr. $2,500 project minimum applies to project-class scopes; permits at cost.</p>
-        <p class="pkg-btn"><a class="btn blue small" href="https://square.link/u/54wERGnT">Book — pay by card</a></p>
+        <p class="pkg-btn"><a class="btn blue small" href="https://square.link/u/VeZCf7Pg">Pay by card</a></p>
       </div>
 
       <div class="card">
@@ -328,7 +275,7 @@
         <p>For any home — one device or a whole-house setup. Smart lock and door hardware installs; video doorbell and camera mounting (battery/wireless units); smart thermostat swaps where the existing wiring is compatible; device setup, app configuration, and a walkthrough so the household can actually use it all. Devices are supplied by the client.</p>
         <p class="trade-line"><strong>Licensed partner does:</strong> anything that touches household wiring — hardwired doorbells/cameras, powered switches and outlets, thermostat installs needing new wiring — a Licensed Electrical Contractor; HVAC-side thermostat work routes to the HVAC trade. Named on the quote, in writing.</p>
         <p class="pkg-price">Price basis: single-device visits bill hourly at the rate-card band for the work performed; whole-home projects at carpentry $95–$135/hr with coordination at the general contractor band $115–$150/hr, and the $2,500 project minimum on project-class scopes. The quote states which basis applies, in writing.</p>
-        <p class="pkg-btn"><a class="btn blue small" href="https://square.link/u/54wERGnT">Book — pay by card</a></p>
+        <p class="pkg-btn"><a class="btn blue small" href="https://square.link/u/VeZCf7Pg">Pay by card</a></p>
       </div>
 
     </div>
@@ -345,7 +292,7 @@
       <div class="step">
         <span class="num">1</span>
         <h3>We look and inform</h3>
-        <p>Tell us what you're building. Project work starts with a paid consultation at your property — we measure, inspect, and inform you of your options and what the code requires before any number is quoted. Product orders start with your card payment.</p>
+        <p>Tell us what you're building. Project work starts with a paid consultation at your property — we measure, inspect, and inform you of your options and what the code requires before any number is quoted. Product orders start with your card payment. You’ll enter the amount from your quote or product card on the secure Square page — we confirm every order by email before anything is sourced.</p>
       </div>
       <div class="step">
         <span class="num">2</span>
@@ -370,7 +317,7 @@
   <div class="container">
     <h2>Start With a Consultation</h2>
     <p>A full consultation at your property — we measure, inspect, and price your project properly, in writing. The fee is $150–$500 + HST depending on the size of the job, credited in full when you sign within 90 days.</p>
-    <p><a class="btn" href="https://square.link/u/54wERGnT">Book a consultation</a></p>
+    <p><a class="btn" href="https://square.link/u/VeZCf7Pg">Pay by card</a></p>
     <p>Prefer email? Write to us at <a class="mail" href="mailto:getitrightrenos@gmail.com">getitrightrenos@gmail.com</a> or call <a class="mail" href="tel:+18667973667">1-866-797-3667</a>.</p>
   </div>
 </section>
@@ -380,8 +327,10 @@
     <h3>Get It Right Renovations Inc.</h3>
     <p>A signatory to Local 27 — unionized craftsmanship. Based in Peel · Serving the Greater Toronto Area (GTA).<br>
     Phone: <a href="tel:+18667973667">1-866-797-3667</a> · Email: <a href="mailto:getitrightrenos@gmail.com">getitrightrenos@gmail.com</a> · Web: getitrightrenos.ca</p>
+    <p>Mailing address: 45 Bramalea Rd, Suite 208 - 598, Brampton, ON L6T 2W4<br>
+    Phone hours: Monday–Friday, 9 a.m.–5 p.m. Eastern</p>
     <div class="smallprint">
-      <p>The products on this page are sold directly by Get It Right Renovations Inc. Prices are in Canadian dollars, verified on the dates shown on each card, and rechecked at order time — if a supplier's price has moved, we confirm the current price with you before anything is ordered. Product warranties are the manufacturer's; where gear is bought in the client's name, its receipts and warranties stay in the client's name. Our installation workmanship is warranted by us. Where a licensed trade is legally required (electrical, plumbing, gas), that work is performed by that licensed trade, named in writing on your quote — we coordinate it and stand behind the coordination. Some links elsewhere on this site may be affiliate links: if you buy through one, the retailer may pay us a commission, at no extra cost to you. © 2026 Get It Right Renovations Inc. · Ontario Corporation #002542194.</p>
+      <p>The products on this page are sold directly by Get It Right Renovations Inc. Prices are in Canadian dollars, verified on the dates shown on each card, and rechecked at order time — if a supplier's price has moved, we confirm the current price with you before anything is ordered. Product warranties are the manufacturer's; where gear is bought in the client's name, its receipts and warranties stay in the client's name. Our installation workmanship is covered by the workmanship terms in your written contract. Where a licensed trade is legally required (electrical, plumbing, gas), that work is performed by that licensed trade, named in writing on your quote — we coordinate it and stand behind the coordination. Some links elsewhere on this site may be affiliate links: if you buy through one, the retailer may pay us a commission, at no extra cost to you. © 2026 Get It Right Renovations Inc. · Ontario Corporation #002542194.</p>
     </div>
   </div>
 </footer>
